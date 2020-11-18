@@ -1,0 +1,17 @@
+.header {
+	background: brown;
+}
+
+.header__container {
+	height: 5vh;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.header__title span {
+	color: white;
+	font-weight: 600;
+	font-size: 30px;
+	font-family: Calibri, serif;
+}

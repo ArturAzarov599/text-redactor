@@ -1,0 +1,12 @@
+.field-component {
+	background: white;
+	height: 90vw;
+	padding: 3vw;
+	width: 80vw;
+}
+
+.field__container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
