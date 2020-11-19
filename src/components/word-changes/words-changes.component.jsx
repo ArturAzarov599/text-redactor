@@ -47,7 +47,7 @@ const WordsChanges = () => {
 
     return (
         <div className={"words-changes"}>
-            <input name="text" value={newValue.text} onChange={onChangeHandler}/>
+            <textarea name="text" value={newValue.text} onChange={onChangeHandler}/>
             <select autoFocus name="color" onChange={onChangeHandler}>
                 {
                     colorArray.map(color => <option key={color} style={{

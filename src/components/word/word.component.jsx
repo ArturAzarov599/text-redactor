@@ -3,7 +3,6 @@ import React from "react";
 import "./word.styles.css";
 import {useDispatch} from "react-redux";
 import {selectValue, showSelectItem} from "../../redux/words/words.actions";
-import {v4} from "uuid";
 
 const Word = (props) => {
 

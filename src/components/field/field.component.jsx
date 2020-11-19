@@ -56,7 +56,6 @@ const Field = () => {
 
     const onAddWord = () => addWord();
 
-
     const onKeyPressHandler = event => {
         if (event.key === 'Enter' || event.key === " ") {
             event.preventDefault();
@@ -76,7 +75,7 @@ const Field = () => {
     return (
         <div className="field-component">
             <div title="To add word click Enter, Space or Add word!" className="field__container __container">
-                <input name="text" value={textObject.text} onChange={onChangeHandler}
+                <textarea name="text" value={textObject.text} onChange={onChangeHandler}
                        onKeyPress={onKeyPressHandler}/>
                 <select value={textObject.color} name="color" onChange={onChangeHandler}>
                     {
