@@ -47,8 +47,10 @@ const WordsChanges = () => {
 
     return (
         <div className={"words-changes"}>
+
             <textarea name="text" value={newValue.text} onChange={onChangeHandler}/>
-            <select autoFocus name="color" onChange={onChangeHandler}>
+
+            <select value={newValue.color} name="color" onChange={onChangeHandler}>
                 {
                     colorArray.map(color => <option key={color} style={{
                         color: "white",
@@ -58,7 +60,7 @@ const WordsChanges = () => {
                 }
             </select>
 
-            <select autoFocus name="backgroundColor" onChange={onChangeHandler}>
+            <select value={newValue.backgroundColor} name="backgroundColor" onChange={onChangeHandler}>
                 {
                     colorArray.map(colorElement => <option key={colorElement}
                                                            style={{
@@ -69,7 +71,7 @@ const WordsChanges = () => {
                 }
             </select>
 
-            <select defaultValue="14" autoFocus name="fontSize" onChange={onChangeHandler}>
+            <select defaultValue="14" name="fontSize" onChange={onChangeHandler}>
                 {
                     fontSizesArray.map(size => <option key={size} value={size}>{size}</option>)
                 }

@@ -48,9 +48,9 @@ const Field = () => {
 
         setTextObject({
             text: "",
-            fontSize,
-            backgroundColor,
-            color
+            fontSize: 14,
+            backgroundColor: "",
+            color: ""
         })
     }
 
@@ -76,8 +76,9 @@ const Field = () => {
         <div className="field-component">
             <div title="To add word click Enter, Space or Add word!" className="field__container __container">
                 <textarea name="text" value={textObject.text} onChange={onChangeHandler}
-                       onKeyPress={onKeyPressHandler}/>
-                <select value={textObject.color} name="color" onChange={onChangeHandler}>
+                          onKeyPress={onKeyPressHandler}/>
+                <select defaultValue={textObject.color} value={textObject.color} name="color"
+                        onChange={onChangeHandler}>
                     {
                         colorArray.map(color => <option key={color} style={{
                             color: "white",
@@ -87,7 +88,8 @@ const Field = () => {
                     }
                 </select>
 
-                <select value={textObject.backgroundColor} name="backgroundColor" onChange={onChangeHandler}>
+                <select defaultValue={textObject.backgroundColor} value={textObject.backgroundColor}
+                        name="backgroundColor" onChange={onChangeHandler}>
                     {
                         colorArray.map(colorElement => <option key={colorElement}
                                                                style={{
@@ -98,7 +100,8 @@ const Field = () => {
                     }
                 </select>
 
-                <select value={textObject.fontSize} name="fontSize" onChange={onChangeHandler}>
+                <select defaultValue={textObject.fontSize} value={textObject.fontSize} name="fontSize"
+                        onChange={onChangeHandler}>
                     {
                         fontSizesArray.map(size => <option key={size} value={size}>{size}</option>)
                     }
